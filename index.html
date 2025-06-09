@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Solitaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Solitaire Game</h1>
+    <div id="solitaire-board">
+        <!-- Cards and piles will be rendered here -->
+    </div>
+    <button onclick="startGame()">Start New Game</button>
+    <script>
+        function startGame() {
+            const board = document.getElementById('solitaire-board');
+            board.innerHTML = '';
+            // For demonstration, we'll just show a simple message.
+            // Real card rendering logic goes here.
+            const msg = document.createElement('div');
+            msg.textContent = 'Game started! (Add your Solitaire logic here)';
+            board.appendChild(msg);
+        }
+    </script>
+</body>
+</html>
