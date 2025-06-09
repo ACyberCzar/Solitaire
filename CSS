@@ -1,0 +1,137 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background: #2e8b57;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+/* Solitaire board */
+.solitaire-board {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Card piles */
+.piles {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.pile {
+    width: 80px;
+    height: 120px;
+    background: rgba(255,255,255,0.1);
+    border: 2px dashed #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    min-height: 120px;
+}
+
+/* Card styling */
+.card {
+    width: 70px;
+    height: 100px;
+    background: #fff;
+    color: #222;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s;
+}
+
+.card.red {
+    color: #d32f2f;
+}
+
+.card.black {
+    color: #222;
+}
+
+.card.face-down {
+    background: #1976d2;
+    color: #fff;
+    border: 2px solid #1565c0;
+}
+
+/* Buttons */
+button {
+    background: #ffd700;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #ffa500;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .container {
+        padding: 10px;
+    }
+    .piles {
+        gap: 8px;
+    }
+    .pile {
+        width: 60px;
+        height: 90px;
+    }
+    .card {
+        width: 50px;
+        height: 70px;
+        font-size: 1rem;
+    }
+}
